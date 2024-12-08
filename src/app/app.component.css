@@ -1,0 +1,45 @@
+@import'../../node_modules/bootstrap/dist/css/bootstrap.css';
+
+.bg-light {
+    background-color: #100d94 !important;
+}
+
+.full{
+    text-align: center;
+}
+.address-list {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+.address-list li {
+    float: left;
+    width: 100%;
+    position:relative;
+}
+.address-list li i {
+    font-size: 24px;
+    width: 25px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+}
+.address-list li {
+    float: left;
+    width: 100%;
+    position: relative;
+    line-height: 30px;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+body {
+    
+    background: linear-gradient(#f8f9fa,#f8f9fa) no-repeat fixed;
+    color: #ffffff;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}

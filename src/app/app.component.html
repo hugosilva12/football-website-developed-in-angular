@@ -1,0 +1,69 @@
+<body>
+  <div class="row">
+      <div class="col-md-12">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: #0e55b6">
+              <a class="navbar-brand" href="#" style="color:white">{{title}}</a>
+              <a class="navbar-brand" href="#"></a>
+              <a class="navbar-brand" href="#"></a>
+              <a class="navbar-brand" href="#"></a>
+              <button 
+                  class="navbar-toggler" 
+                  type="button" 
+                  data-toggle="collapse" 
+                  data-target="#navbarNav" 
+                  aria-controls="navbarNav" 
+                  aria-expanded="false" 
+                  aria-label="Toggle navigation"
+              >
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <a class="nav-link" routerLink="/teamsch" style="color:white">Champions League</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" routerLink="/teamspt" style="color:white">Liga Portuguesa</a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+          <router-outlet></router-outlet>
+      </div>
+  </div>
+
+  <div class="row" style="background-color:black">
+      <div class="col-md-12">
+          <p></p>
+      </div>
+  </div>
+
+  <div class="row" style="background-color:black">
+      <div class="col-md-6" style="background-color:black">
+          <div class="full"></div>
+      </div>
+      <div class="col-md-6" style="background-color:black">
+          <h3>Contact us</h3>
+      </div>
+  </div>
+
+  <div class="row" style="background-color:black">
+      <div class="col-md-6">
+          <div class="full" style="background-color:black">
+              <img src="assets/images/footer-logo.png" alt="#" />
+          </div>
+      </div>
+      <div class="col-md-6" style="background-color:black">
+          <ul class="address-list">
+              <li><i class="fa fa-phone"></i> 123 456 7890</li>
+              <li><i style="font-size:20px; top:5px;"></i> FuteWatch@gmail.com</li>
+          </ul>
+      </div>
+  </div>
+
+  <div class="row" style="background-color:black">
+      <div class="col-md-12" style="text-align:center">
+          <p>Copyright © 2019 Distributed by FuteWatch</p>
+      </div>
+  </div>
+</body>

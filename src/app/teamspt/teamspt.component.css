@@ -1,0 +1,30 @@
+.card {
+    float: left;
+    width: 100%;
+    border: solid #ccc 3px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+   min-height : 356px;
+}
+
+body {
+    
+    background: linear-gradient(#f8f9fa,#f8f9fa) no-repeat fixed;
+    color: #fff;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+
+button.button {
+    background: #1c72ce;
+    color: #fff;
+    border: none;
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.ola{
+    font-size: 13px;
+}

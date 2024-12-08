@@ -1,0 +1,109 @@
+<div class="body">
+   <div class="inner-page-banner4">
+      <div class="container">
+      </div>
+   </div>
+
+   <div class="inner-information-text">
+      <div class="container">
+         <h3>Our Team</h3>
+         <ul class="breadcrumb">
+            <li><a href="#">Home /</a></li>
+            <li class="active">Our Team</li>
+         </ul>
+      </div>
+   </div>
+
+   <p>Hello</p>
+
+   <div class="row">
+      <div class="container">
+         <div class="col-md-12" style="text-align:center">
+            <h2 style="color:black">{{football.name | json}}</h2>
+            {{getcor(football.clubColors)}}
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <br>
+      <br>
+      <div class="row">
+         <div class="col-md-12" style="color:black">
+            <h3 style="text-align:center">Plantel</h3>
+         </div>
+      </div>
+   </div>
+
+   <section id="contant" class="contant main-heading team">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-3" *ngFor="let teamslist of football.squad">
+               <br>
+               <div class="team-column style-2">
+                  <img src="{{getimages(teamslist.id)}}" alt="">
+                  <div class="player-name">
+                     <div class="desination-3" style="background-color:darkgray;" *ngIf="teamslist.position != null">
+                        <img src="{{getbandeiras(teamslist.nationality)}}" data-toggle="tooltip" title="{{teamslist.nationality}}" style="margin-left: 0px;">
+                        &nbsp;{{teamslist.position}}
+                     </div>
+                     <div class="desination-3" style="background-color:darkgray;" *ngIf="teamslist.position == null">
+                        <img src="{{getbandeiras(teamslist.nationality)}}" data-toggle="tooltip" title="{{teamslist.nationality}}" style="margin-left: 0px;">
+                        &nbsp;{{teamslist.role}}
+                     </div>
+                     <h5>{{teamslist.name}}</h5>
+                     <h6 style="font-size:15px">{{getidade(teamslist.dateOfBirth)}} -anos</h6>
+                     <span style="background-color: darkgray; border:2px;" class="player-number">{{teamslist.shirtNumber}}</span>
+                  </div>
+                  <br>
+               </div>
+            </div>
+            <br>
+         </div>
+      </div>
+
+      <div class="container">
+         <br>
+         <br>
+         <div class="row">
+            <div class="col-md-12" style="color:black">
+            </div>
+         </div>
+      </div>
+
+      <div class="container">
+         <div class="row">
+            <div class="col-md-7 col-sm-7 col-xs-12">
+               <div class="full">
+                  <h3>{{football.name}}</h3>
+                  <p style="color:black">
+                     <p style="width: 250px;" style="color:black" data-toggle="tooltip" data-placement="top" title="<img style='width:70%; height:70% ;' src='images/ba.jpg '/>">
+                        <b style="color:black" data-toggle="tooltip" data-placement="top" title="{{football.clubColors}}">Cores: </b> {{football.clubColors}}
+                     </p>
+                     <p style="color:black"><b style="color:black">Ano de Fundação: </b> {{football.founded}}</p>
+                     <p style="color:black"><b style="color:black">País: </b> {{football.area.name}}</p>
+                     <p style="color:black"><b style="color:black">Estádio: </b> {{football.venue}}</p>
+                     <h4 style="text-align:center"><b style="color:black">Competições</b></h4>
+                     <aside id="sidebar" class="left-bar">
+                        <div class="feature-matchs">
+                           <table class="table table-bordered table-hover">
+                              <tr>
+                                 <td style="text-align:center"><b>Nome</b></td>
+                              </tr>
+                              <tr *ngFor="let teamslist of football.activeCompetitions">
+                                 <td align="justify">{{teamslist.name}}</td>
+                              </tr>
+                           </table>
+                        </div>
+                     </aside>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-md-5 col-sm-5 col-xs-12">
+               <img class="img-responsive" src="{{getlog(football.id)}}" alt="#" style="width:400px"/>
+            </div>
+         </div>
+      </div>
+   </section>
+</div>

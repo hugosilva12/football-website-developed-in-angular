@@ -1,0 +1,100 @@
+
+
+<div class="row">
+
+    <img class="responsive" src="{{inicial}}"  style="height:600px;width:100% ">
+  
+  </div>
+ 
+  <div class="row" style="background-color:white">
+    <div class="col-md-12" style="text-align:center">
+      <hr>
+      <h2 style="color:black"><b>O Teu Site da</b> <img src="assets/images/bol.jpg" style="width:30px;height:30px ;">!</h2>
+      <hr>
+    </div>
+</div>
+     
+   
+  
+  <div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-12" *ngFor='let Home of Home' >
+   
+      <div class="row"  >
+            <div class="full" style="width:100%"  >
+                <div class="left-match-time" *ngIf="Home.id == 1" style="height:320px;">
+                    <h2 style="font-size: 40px" >{{Home.name}} </h2><br/>
+                    <a  routerLink="{{Home.router}}">  <button class="btn btn-primary btn-lg">Ver Equipas!</button></a>
+                </div>
+                <div class="right-match-time"*ngIf="Home.id == 2" style="height:320px;">
+                    <h2 style="font-size: 40px" >{{Home.name}} </h2><br/>
+                    <a routerLink="{{Home.router}}" >  <button class="btn btn-primary btn-lg">Ver Equipas!</button></a>
+       
+                  </div>
+              </div>
+          </div>
+ 
+    </div>
+   
+  </div>
+  <div class="row" style="background-color:white">
+      <div class="col-md-12" style="text-align:center">
+        <hr>
+        <h2 style="color:black"><b>Informações</b> <img src="assets/images/101.png" style="width:30px;height:30px ;"></h2>
+        <hr>
+      </div>
+  </div>
+  <div class="row" style="background-color:white">
+  
+      <div class="col-md-12" style="text-align:center" >
+            <div class="col-md-6" style="float:left" >
+              <table class="table"  border="1">
+                
+            <th> <h2 style="color:black;font-size:30px">{{football.name}}</h2></th>
+            <tr>
+              <td><img src="assets/images/qaq.png" style="width:16.5%"></td>
+            </tr>
+            <tr>
+                <td> <p style="color:black"   ><b> Data de Início  :</b> {{football.currentSeason.startDate}}  </p> </td>
+                </tr>
+                <tr>
+                    <td><p style="color:black"   ><b> Data do Fim  :</b> {{football.currentSeason.endDate}}  </p> </td>
+                    </tr>
+                    <tr style="border:black">
+                        <td><div class="col-md-12" style="text-align:center"  *ngFor="let teamlist of football.seasons " > 
+                            <p style="color:black; text-align: center" *ngIf="teamlist.winner != null" > <b> Último Vencedor  :</b> {{teamlist.winner.name}}</p>
+                            </div> </td>
+                        </tr>
+                
+              </table>
+          </div>
+       <div class="col-md-6"  style="float: right;" >
+          <table class="table"  border="1">
+                
+              <th> <h2 style="color:black;font-size:30px">{{football2.name}}</h2></th>
+              <tr>
+                <td><img src="{{football2.emblemUrl}}" ></td>
+              </tr>
+              <tr>
+                  <td> <p style="color:black"   ><b> Data de Início  :</b> {{football2.currentSeason.startDate}}  </p> </td>
+                  </tr>
+                  <tr>
+                      <td><p style="color:black"   ><b> Data do Fim  :</b> {{football2.currentSeason.endDate}}  </p> </td>
+                      </tr>
+                      <tr style="border:black">
+                          <td><div class="col-md-12" style="text-align:center"  *ngFor="let teamlist of football2.seasons " > 
+                              <p style="color:black; text-align: center" *ngIf="teamlist.winner != null" > <b> Último Vencedor  :</b> {{teamlist.winner.name}}</p>
+                              </div> </td>
+                          </tr>
+                  
+                </table>
+      </div>
+      </div>
+      
+  
+      
+    </div>
+
+
+
+
+

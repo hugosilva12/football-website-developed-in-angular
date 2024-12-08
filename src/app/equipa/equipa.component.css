@@ -1,0 +1,543 @@
+.inner-page-banner4 {
+    float: left;
+    width: 100%;
+    min-height: 500px;
+    background-image: url('assets/images/4.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.inner-information-text {
+    float: left;
+    width: 100%;
+    background: #111;
+    color: #fff;
+}
+.inner-information-text h3 {
+    color: #fff;
+    margin: 0;
+    padding: 10px 0;
+    float: left;
+    text-transform: uppercase;
+}
+.breadcrumb {
+    padding: 11px 0;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    float: right;
+}
+.body {
+    
+    background: linear-gradient(#f8f9fa,#f8f9fa) no-repeat fixed;
+    color: #ffffff;
+    height: 100%;
+    margin: 0;
+    width:100%;
+}
+.team-column {
+    position: relative;
+    /*float: left;*/
+    overflow: hidden;
+    transition: ease all 1s;
+}
+.team-column.style-2 .overlay {
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.team-column.style-2 .team-detail-hover {
+    padding: 0 20px;
+}
+.team-column.style-2 .overlay p {
+    color: #fff;
+    margin: 0 0 10px;
+}
+.team-column.style-2 .overlay .social-icons {
+    display: inline-block;
+    margin: 0 0 10px;
+}
+.team-column.style-2 .overlay .social-icons li a {
+    color: #fff;
+    border: 1px solid #fff;
+}
+.player-name {
+    position: absolute;
+    background: #000;
+    text-align: left;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 20px;
+}
+.player-name h5 {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.player-name .player-number {
+    border-radius: 0;
+    top: 0;
+    right: 0;
+    left: auto;
+    height: 100%;
+    line-height: 58px;
+    background:#20CcFA;
+    color: #fff;
+    width: 48px;
+    border: 0;
+    position: absolute;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    border:2px;
+}
+.player-name .desination-3::before {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 1px;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid darkgray;
+    border-right: 20px solid transparent;
+   }
+   .player-name .desination-3 {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        background:white;
+        z-index: 1;
+        padding: 3px 20px 2px;
+        text-transform: capitalize;
+        color: #FFF;
+        font-size: 14px;
+        font-weight: 400;
+   }
+   .player-name .player-number {
+    border-radius: 0;
+    top: 0;
+    right: 0;
+    left: auto;
+    height: 100%;
+    line-height: 58px;
+    background:#20CcFA;
+    color: #fff;
+    width: 48px;
+    border: 0;
+    position: absolute;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600; 
+         }
+         .team-holder {
+            float: left;
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 75px;
+       }
+       .player-name {
+            position: absolute;
+            background: #000;
+            text-align: left;
+            bottom: 0;
+            width: 100%;
+            padding: 15px 20px;
+       }
+       .player-name h5 {
+            margin: 0;
+            color: #fff;
+            font-size: 16px;
+            float: left;
+            margin: 0;
+            padding: 0;
+       }
+       .player-name .player-number {
+            border-radius: 0;
+            top: 0;
+            right: 0;
+            left: auto;
+            height: 100%;
+            line-height: 58px;
+            background:#20CcFA;
+            color: #fff;
+            width: 48px;
+            border: 0;
+            position: absolute;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+       }
+       .team-column {
+            position: relative;
+            /*float: left;*/
+            overflow: hidden;
+            transition: ease all 1s;
+       }
+       .player-name h5 {
+            margin: 0;
+            color: #fff;
+            font-size: 16px;
+       }
+       .player-name .desination-2 {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            background:#20CcFA;
+            z-index: 1;
+            padding: 3px 20px 2px;
+            text-transform: capitalize;
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 400;
+       }
+       .player-name .desination-2::before {
+        content: "";
+        position: absolute;
+        left: 100%;
+        top: 1px;
+        width: 0;
+        height: 0;
+        border-bottom: 30px solid#20CcFA;
+        border-right: 20px solid transparent;
+       }
+       .player-name .desination-3::before {
+        content: "";
+        position: absolute;
+        left: 100%;
+        top: 1px;
+        width: 0;
+        height: 0;
+        
+        border-right: 20px solid transparent;
+       }
+       .player-name .desination-3 {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            background:red;
+            z-index: 1;
+            padding: 3px 20px 2px;
+            text-transform: capitalize;
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 400;
+       }
+       .player-name .desination-4::before {
+        content: "";
+        position: absolute;
+        left: 100%;
+        top: 1px;
+        width: 0;
+        height: 0;
+        border-bottom: 30px solid #00346e;;
+        border-right: 20px solid transparent;
+       }
+       .player-name .desination-4 {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            background:#00346e;;
+            z-index: 1;
+            padding: 3px 20px 2px;
+            text-transform: capitalize;
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 400;
+       }
+       .team-column.style-2 .overlay {
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2;
+            visibility: hidden;
+            opacity: 0;
+       }
+       .overlay {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+       }
+       .team-column.style-2 .team-detail-hover {
+            padding: 0 20px;
+       }
+       .team-column.style-2 .overlay p {
+            color: #fff;
+            margin: 0 0 10px;
+       }
+       .team-column.style-2 .overlay .social-icons {
+            display: inline-block;
+            margin: 0 0 10px;
+       }
+       .team-column.style-2 .overlay .social-icons li a {
+            color: #fff;
+            border: 1px solid #fff;
+       }
+       .social-icons.style-4 li a {
+            height: 40px;
+            width: 40px;
+            background: none;
+            border: 1px solid #fff;
+            color: #fff;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 40px;
+            font-size: 18px;
+       }
+       footer div.full p {
+            text-align: left;
+       }
+       .team-column img {
+            transition:ease all 1s;
+       }
+       .team-column:hover img,.team-column:focus img {
+            transform: scale(1.2);
+       }
+       .aboutus h3 {
+            font-size: 22px;
+            padding: 0;
+            text-align: left;
+            font-weight: 500;
+            margin-bottom: 10px;
+       }
+       .icon-list {
+            float: left;
+            width: 100%;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 400;
+            color: #363636;
+            line-height: 28px;
+       }
+       .dark-section {
+            float: left;
+            width: 100%;
+            background: #000;
+            margin-top: 50px;
+            min-height: auto;
+            padding: 50px 0;
+            background-position: cover;
+            color: #fff;
+       }
+       section.main-heading .dark-section h2 {
+            float: left;
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 21px;
+            font-weight: 600;
+            color: #fff;
+            padding: 0;
+            margin: 0;
+            position: relative;
+       }
+       .testimonial-slider {
+            float: left;
+            width: 80%;
+            background: #fff;
+            margin: 40px 10% 0 10%;
+            padding: 40px 0;
+       }
+       .testimonial-slider p {
+            text-align: center !important;
+       }
+       .testimonial-slider a.carousel-control {
+            display: none;
+       }
+       button.button {
+            background: #1c72ce;
+            color: #fff;
+            border: none;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+       }
+       .center {
+            float: left;
+            width: 100%;
+       }
+       .footer-menu li {
+            font-weight: 300;
+            font-size: 14px;
+       }
+       .footer-logo img {
+            width: 180px;
+            padding-top: 10px;
+       }
+       .feature-post {
+            float: left;
+            width: 100%;
+            position: relative;
+       }
+       .feature-img {
+            float: left;
+            width: 100%;
+            position: relative;
+       }
+       .feature-cont {
+            float: right;
+            background: #fff;
+            width: 100%;
+            margin: 0 0 25px 0;
+            position: relative;
+            z-index: 1;
+            padding: 25px 35px;
+       }
+       .post-people {
+            float: left;
+            width: 100%;
+       }
+       .left-profile {
+            float: left;
+       }
+       .post-info {
+            float: left;
+       }
+       #team-slider div.container {
+        padding: 0;
+   }
+   #team-slider div.container div.col-md-3 {
+        padding:0;
+   }
+   section#contant p {
+    float: left;
+    width: 100%;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: left;
+    font-weight: 400;
+}
+section.main-heading {
+    float: left;
+    width: 100%;
+}
+section.main-heading h2 {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    line-height: 21px;
+    font-weight: 600;
+    color: #222;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+section.main-heading h3 {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    line-height: 21px;
+    font-weight: 600;
+    color: #222;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+section.main-heading h2::after {
+    width: 50px;
+    height: 4px;
+    background: #20CcFA;
+    margin: 15px auto 0;
+    display: block;
+    position: relative;
+    content: "";
+}
+section.main-heading h3::after {
+    width: 50px;
+    height: 4px;
+    background:red;
+    margin: 15px auto 0;
+    display: block;
+    position: relative;
+    content: "";
+}
+section.main-heading h4::after {
+    width: 50px;
+    height: 4px;
+    background: #00346e;
+    margin: 15px auto 0;
+    display: block;
+    position: relative;
+    content: "";
+}
+   
+.btn2 {
+    float: left;
+    background: black;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 50px;
+    margin-top: 5px;
+    font-weight:500;
+    transition:ease all 1s;
+}
+collapse multi-collapse
+.btn2:hover,.btn:focus {
+     background:#111;
+     color:#fff !important;
+     transition:ease a11 1s;
+}
+#sidebar {
+     float: left;
+     width: 100%;
+     background: #fff;
+     min-height: auto;
+     padding: 0;
+     box-shadow: 0 10px 20px -25px rgba(50,50,50,1);
+     border: solid #e1e1e1 1px;
+     margin-bottom: 25px;
+}
+aside#sidebar h3 {
+     font-size: 16px;
+     color: #363636;
+     float: left;
+     margin: 10px 0;
+     padding: 0 15px;
+     font-weight: 600;
+}
+aside#sidebar .team-btw-match ul li:first-child {
+     float: left;
+}
+aside#sidebar .team-btw-match ul li span {
+     color: #222;
+     text-transform: capitalize;
+     font-weight: 600;
+     display: block;
+     font-size: 14px;
+}
+aside#sidebar .team-btw-match ul li {
+     width: 41%;
+     text-align: center;
+     float: right;
+}
+aside#sidebar .team-btw-match.style-2 ul li span {
+     color: #222;
+}
+aside#sidebar .macth-fixture ul {
+     padding: 15px 0;
+     overflow: hidden;
+     border-bottom: 1px solid #e1e1e1;
+}
+aside#sidebar .team-btw-match ul {
+     position: relative;
+     padding: 10px 0;
+     display: flex;
+}
