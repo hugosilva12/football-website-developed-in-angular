@@ -3,7 +3,7 @@ import{Http,Headers,RequestOptions} from  '@angular/http';
 import'rxjs/add/operator/map';
 import { identifierModuleUrl } from '@angular/compiler';
 @Injectable()
-export class EquipaService {
+export class TeamService {
 
  
   constructor(private http: Http) { }

@@ -1,119 +1,94 @@
 import { Component, OnInit } from '@angular/core';
-import{EquipaService} from'./equipa.service';
-import{ActivatedRoute} from '@angular/router';
-import{Location}  from '@angular/common';
-import{LOG} from './mocks';
-import{FOTO} from'./fotosjr';
-import{BA} from'./bandeiras';
-import { core } from '@angular/compiler';
+import { TeamService } from './equipa.service';
+import { ActivatedRoute } from '@angular/router';
+import { LOG } from './mocks';
+import { FOTO } from './fotosjr';
+import { BA } from './bandeiras';
 
 @Component({
   selector: 'app-equipa',
   templateUrl: './equipa.component.html',
   styleUrls: ['./equipa.component.css']
 })
-export class EquipaComponent implements OnInit {
-  [x: string]: any;
- football:{};
- id:String;
- Log:{};
- Foto:{};
- ola:String;
- hello:String;
- date:{};
- cor:{};
- core:String;
+export class TeamComponent implements OnInit {
+  football: any;
+  id: string;
+  log: any;
+  foto: any;
+  flagStatus: string;
+  nationality: string;
+  birthDate: any;
+  color: any;
+  coreColor: string;
+
   constructor(
-    private equipa: EquipaService ,
+    private equipaService: TeamService,
     private route: ActivatedRoute
-    
-    ) { }
+  ) { }
 
-  ngOnInit() {
-    this.football;
-   
+  ngOnInit(): void {
     this.getFootball();
-    this.core= this.getcor(core);
- 
+    this.coreColor = this.getColor(core);
   }
-   
-  getFootball(){
+
+  getFootball(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.equipa.getFootball(id).subscribe(football => this.football=football);
-    this.Log=LOG;
-    this.Foto=FOTO;
+    this.equipaService.getFootball(id).subscribe(football => this.football = football);
+    this.log = LOG;
+    this.foto = FOTO;
   }
 
-  
-
-  getIdade(nascimento){
-    var idadeDifMs = Date.now() - nascimento.getTime();
-    var idadeData = new Date(idadeDifMs);
-    var idade = idadeData.getUTCFullYear() - 1970;
-    return idade;
+  calculateAge(birthDate: Date): number {
+    const ageDifMs = Date.now() - birthDate.getTime();
+    const ageDate = new Date(ageDifMs);
+    return ageDate.getUTCFullYear() - 1970;
   }
 
-  getlog(id1){
-    for(let team of LOG){
-      if(team.id == id1){
-      return team.url;
+  getLogUrl(id: string): string {
+    for (let team of LOG) {
+      if (team.id === id) {
+        return team.url;
+      }
     }
-
-    }
-    
-  }
-  getimages(id1){
-     this.ola = '1';
-    for(let equipa of FOTO){
-      if(equipa.id == id1){
-      this.ola='2';
-        return equipa.url;
-
-    }
-
-    }
-
-    
-    if(this.ola == '1'){
-      
-        return 'assets/images/uni.jpg';
-   
-    }
-
-    
+    return '';
   }
 
-  getbandeiras(id1){
-    this.hello= id1;
+  getImageUrl(id: string): string {
+    this.flagStatus = '1';
+    for (let team of FOTO) {
+      if (team.id === id) {
+        this.flagStatus = '2';
+        return team.url;
+      }
+    }
 
-   for(let equipa of BA){
-     if(equipa.id == this.hello){
-       return equipa.url;
-
-   }
-
+    if (this.flagStatus === '1') {
+      return 'assets/images/uni.jpg';
+    }
+    return '';
   }
- 
-}
 
-getidade( date){
-  var idadeDifMs = Date.now();
-  var idadeData = new Date(idadeDifMs);
-  var idade = idadeData.getUTCFullYear() - 1970;
-this.date= date.split("-");
-return  idadeData.getUTCFullYear()- this.date[0];
+  getFlagUrl(id: string): string {
+    this.nationality = id;
+    for (let team of BA) {
+      if (team.id === this.nationality) {
+        return team.url;
+      }
+    }
+    return '';
+  }
 
+  getAgeFromDate(date: string): number {
+    const ageDifMs = Date.now();
+    const ageDate = new Date(ageDifMs);
+    this.birthDate = date.split("-");
+    return ageDate.getUTCFullYear() - parseInt(this.birthDate[0], 10);
+  }
 
-
-}
-getcor( cor){
-this.cor= cor.split("/")
-this.cor[0]= this.cor[0].toLocaleLowerCase();
-this.core= this.cor[0];
-return this.core;
-
-
-
-}
-
+  getColor(color: string): string {
+    this.color = color.split("/");
+    this.color[0] = this.color[0].toLocaleLowerCase();
+    this.coreColor = this.color[0];
+    return this.coreColor;
+  }
 }
